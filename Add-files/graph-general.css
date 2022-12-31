@@ -1,0 +1,117 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    background: rgba(189, 240, 174, 0.403);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.chart{
+    width: 600px;
+    height: 300px;
+    display: block;
+}
+ 
+.bars {
+    color: rgba(0, 0, 0, 0.861);
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+    
+}
+.bars li{
+    display: table-cell;
+    width: 85px;
+    height: 360px;
+    position: relative;
+}
+.bars span{
+    width: 100%;
+    position: absolute;
+    bottom: -39px;
+    text-align: center;
+    margin-left: -42px;
+}
+
+.bars .bar1 {
+    display: block;
+    background: #285fd6dc;
+    width: 50px;
+    position: absolute;
+    bottom: 85px;
+    margin-left: 150px;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(31, 34, 19, 0.486);
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+}
+.bars .bar2 {
+    display: block;
+    background: #fc2929e0;
+    width: 50px;
+    position: absolute;
+    bottom: 85px;
+    margin-left: 150px;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(71, 92, 71, 0.759);
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+}
+.bars .bar3 {
+    display: block;
+    background: #f76c0fe7;
+    width: 50px;
+    position: absolute;
+    bottom: 85px;
+    margin-left: 150px;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(57, 46, 75, 0.705);
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+}
+
+.bars .bar1:hover{
+    background: #8bfb01;
+    box-shadow: 0 0 10px 0 rgba(6, 35, 27, 0.5);
+    cursor: pointer;
+}
+.bars .bar1:before{
+    color: rgba(6, 6, 6, 0.866);
+    content: attr(data-percentage) '%';
+    position: relative;
+    bottom: 20px;
+}
+.bars .bar2:hover{
+    background: #16b210;
+    box-shadow: 0 0 10px 0 rgba(6, 6, 6, 0.866);
+    cursor: pointer;
+}
+.bars .bar2:before{
+    color: rgba(13, 15, 13, 0.883);
+    content: attr(data-percentage) '%';
+    position: relative;
+    bottom: 20px;
+}
+.bars .bar3:hover{
+    background: #558b7c;
+    box-shadow: 0 0 10px 0 rgba(6, 6, 6, 0.866);
+    cursor: pointer;
+}
+.bars .bar3:before{
+    color: rgba(0, 0, 0, 0.874);
+    content: attr(data-percentage) '%';
+    position: relative;
+    bottom: 20px;
+}
+ 
+ 

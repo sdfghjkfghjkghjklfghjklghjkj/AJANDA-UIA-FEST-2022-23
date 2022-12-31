@@ -4,18 +4,54 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Senior point graph</title>
    <link rel="icon" src="logo.jpg" type="image/x-icon">
 
 
-   <link rel="stylesheet" href="fest-menu.css">
+   <link rel="stylesheet" href="Add-files/graph-fest-menu.css">
+   <link rel="stylesheet" href="Add-files/graph-senior.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script>
+
+  
+    
 </head>
 <body>
+
+
+ 
+ 
+ 
+  
+
+
+    
    <div class="menu-btn">
+    
        <i class="fas fa-bars"></i>
    </div>
+
+    <!--chart start-->
+ 
+    <div class="chart">       
+ 
+        <ul class="bars">
+            <li><div class="bar1" data-percentage="30"><span>TELESUR</span></sapn></div></li>
+            <li><div class="bar2" data-percentage="80"><span>BLOOMBERG</span></sapn></div></li>
+            <li><div class="bar3" data-percentage="20"><span>RETURS</span></sapn></div></li>
+           
+
+        </ul>
+        <marquee><p style="color: red; margin-top: 120px;"><img src="images/LOGO.png" style="width: 100px;"></p></marquee>
+
+    </div>
+  
+
+    <!--chart end-->
+
+
+
+
    <div class="side-bar">
        <div class="close-btn">
            <i class="fas fa-times"></i>
@@ -29,20 +65,23 @@
                <div class="sub-menu">
                    <a href="result-junior.html" class="sub-item">JUNIOR</a>
                    <a href="result-senior.html" class="sub-item">SENIOR</a>
-                   <a href="result-general.htm" class="sub-item">GENERAL</a>
+                   <a href="result-general.html" class="sub-item">GENERAL</a>
+                   <a href="result-total.html" class="sub-item">TOTAL</a>
+
                 </div>
             </div>
-
+          
            <div class="item">
                <a class="sub-btn"><i class="fa-solid fa-chart-simple"></i>GRAPH<i class="fas fa-angle-right dropdown "></i></a>
                <div class="sub-menu">
                    <a href="graph-junior.html" class="sub-item">JUNIOR</a>
                    <a href="graph-senior.html" class="sub-item">SENIOR</a>
                    <a href="graph-general.html" class="sub-item">GENERAL</a>
-               </div>
+              
+                </div>
            </div>
 
-             <div class="item"><a href="graph-total.html"><i class="fas fa-info-circle"></i>TOTAL GRAPH</a></div>
+           <div class="item"><a href="graph-total.html"><i class="fa-solid fa-chart-pie"></i>TOTAL GRAPH</a></div>
 
              <div class="item">
                 <a class="sub-btn"><i class="fa fa-image"></i>IMAGES<i class="fas fa-angle-right dropdown "></i></a>
@@ -52,27 +91,38 @@
                     <a href="images-off-stage.html" class="sub-item">OFF-STAGE</a>
                 </div>
             </div>
+            <div class="item"><a href="live.html"><i class="fas fa-video"></i>VIDEOS & LIVE</a></div>
+            <div class="item"><a href="form-sumtnow.html"><i class="fa-solid fa-comment"></i>FEED BACK</a></div>
 
         </div>
 
    </div>
-
-   <section class="main">
-       <h1>Sidebar Menu With<br>Sub-Menus</h1>
-
-   </section>
+ 
 
 
 
+    
+
+
+
+     
+    
+    <script type="text/javascript">
+        $(function(){
+            $('.bars li .bar1, .bar2, .bar3').each(function(key, bar){
+                var percentage = $(this).data('percentage')
+                $(this).animate({
+                    'height' : percentage + '%'
+                },1900)
+            })
+        })
+
+    </script>
 
 
 
 
-
-
-
-
-
+</script>
        <script type="text/javascript">
            $(document).ready(function(){
                //jquery for toggle sub menus

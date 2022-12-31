@@ -1,97 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <link rel="icon" src="logo.jpg" type="image/x-icon">
-
-
-   <link rel="stylesheet" href="fest-menu.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script>
-</head>
-<body>
-   <div class="menu-btn">
-       <i class="fas fa-bars"></i>
-   </div>
-   <div class="side-bar">
-       <div class="close-btn">
-           <i class="fas fa-times"></i>
-       </div>
-       <div class="menu">
-           <div class="item"><a href="index.html"><i class="fas fa-desktop"></i>HOME</a></div>
-             <div class="item"><a href="schedule.html"><i class="fa-solid fa-clock"></i>SCHEDULE</a></div>
-
-             <div class="item">
-               <a class="sub-btn"><i class="fa fa-edit"></i>RESULT<i class="fas fa-angle-right dropdown"></i></a> 
-               <div class="sub-menu">
-                   <a href="result-junior.html" class="sub-item">JUNIOR</a>
-                   <a href="result-senior.html" class="sub-item">SENIOR</a>
-                   <a href="result-general.htm" class="sub-item">GENERAL</a>
-                </div>
-            </div>
-
-           <div class="item">
-               <a class="sub-btn"><i class="fa-solid fa-chart-simple"></i>GRAPH<i class="fas fa-angle-right dropdown "></i></a>
-               <div class="sub-menu">
-                   <a href="graph-junior.html" class="sub-item">JUNIOR</a>
-                   <a href="graph-senior.html" class="sub-item">SENIOR</a>
-                   <a href="graph-general.html" class="sub-item">GENERAL</a>
-               </div>
-           </div>
-
-             <div class="item"><a href="graph-total.html"><i class="fas fa-info-circle"></i>TOTAL GRAPH</a></div>
-
-             <div class="item">
-                <a class="sub-btn"><i class="fa fa-image"></i>IMAGES<i class="fas fa-angle-right dropdown "></i></a>
-                <div class="sub-menu">
-                    <a href="images-fest.html" class="sub-item">FEST</a>
-                    <a href="images-on-stage.html" class="sub-item">ON-STAGE</a>
-                    <a href="images-off-stage.html" class="sub-item">OFF-STAGE</a>
-                </div>
-            </div>
-
-        </div>
-
-   </div>
-
-   <section class="main">
-       <h1>Sidebar Menu With<br>Sub-Menus</h1>
-
-   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-       <script type="text/javascript">
-           $(document).ready(function(){
-               //jquery for toggle sub menus
-               $('.sub-btn').click(function(){
-                   $(this).next('.sub-menu').slideToggle();
-                   $(this).find('.dropdown').toggleClass('rotate')
-                    
-               })
-               //jquery for expand and collapse the sidebar
-               $('.menu-btn').click(function(){
-                   $('.side-bar').addClass('active');
-                   $('menu-btn').css("visibility","hidden");
-               })
-               $('.close-btn').click(function(){
-                   $('.side-bar').removeClass('active');
-                   $('menu-btn').css("visibility","visible");
-               })
-           })
-       </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result junior</title>
+       <link rel="icon" src="logo.jpg" type="image/x-icon">
     
-</body>
-</html>
+    
+       <link rel="stylesheet" href="Add-files/data-table-fest.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script>
+    <style>
+        #myHeader {
+  background-color: rgba(253, 101, 101, 0.145);
+  color: black;
+  padding: 9px;
+  text-align: center;
+  
+} 
+    </style>
+
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.3.1/css/rowReorder.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.dataTables.min.css">
+
+
+    </head>
+    <body>
+       <div class="menu-btn">
+           <i class="fas fa-bars"></i>
+       </div>
+
+<div id="myHeader">
+    <h2 >JUNIOR RESULT</h2>
+    <marquee><p style="font-size: 10px; color: red; margin-top: px;">Latest update in 30-12-2022 at 05:50 pm</p></marquee>
+
+
+</div>
+<br>
+
+
+<div class="container py-">
+    <div class="roe">
+
+        <table id="example" class="display nowrap" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Sl No</th>
+                    <th>Items</th>
+                    <th>Category</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>Song MAL (sNR)</td>
+                    <td><b>A </b> (12, 8, 4)</td>
+                    <td>
+                        <br>Fist with a Grade: 323-MHD Jaseel (Telesur)<br>
+                        second with b Grade: 101-vasih (Bloomberg)<br>
+                        therd with c greate: 201-swalih pachambla (Retura)<br></td>
+                 
+                
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Essay MAL (SNR)</td>
+                    <td><b>A </b> (12, 8, 4)</td>
+                    <td>
+                        <br>Fist with a Grade: 313-Mafaz Rahman (Telesur)<br>
+                        second with b Grade: 101-vasih (Bloomberg)<br>
+                        therd with c greate: 201-swalih pachambla (Retura)<br></td>
+                 
+                
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>oration ENG (SNR)</td>
+                    <td><b>B </b> (10, 6, 3)</td>
+                    <td>
+                        <br>Fist with a Grade: 313-Mafaz Rahman (Telesur)<br>
+                        second with b Grade: 101-vasih (Bloomberg)<br>
+                        therd with c greate: 201-swalih pachambla (Retura)<br></td>
+                 
+                
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>Song (MAL)</td>
+                    <td><b>A </b> (12, 8, 4)</td>
+                    <td>
+                        <br>Fist with a Grade: 313-Mafaz Rahman (Telesur)<br>
+                        second with b Grade: 101-vasih (Bloomberg)<br>
+                        therd with c greate: 201-swalih pachambla (Retura)<br></td>
+                 
+                
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>Azan (JNR)</td>
+                    <td><b>C </b> (6, 4, 2)</td>
+                    <td>
+                        <br>Fist with a Grade: 313-Mafaz Rahman (Telesur)<br>
+                        second with b Grade: 101-vasih (Bloomberg)<br>
+                        therd with c greate: 201-swalih pachambla (Retura)<br></td>
+                 
+                
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>Burdha (GNR)</td>
+                    <td><b>D </b> (20, 15, 10)</td>
+                    <td>
+                        <br>Fist with a Grade: 313-Mafaz Rahman (Telesur)<br>
+                        second with b Grade: 101-vasih (Bloomberg)<br>
+                        therd with c greate: 201-swalih pachambla (Retura)<br></td>
+                 
+                
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>Song MAL (sNR)</td>
+                    <td><b>A </b> (12, 8, 4)</td>
+                    <td>
+                        <br>Fist with a Grade: 323-MHD Jaseel (Telesur)<br>
+                        second with b Grade: 101-vasih (Bloomberg)<br>
+                        therd with c greate: 201-swalih pachambla (Retura)<br></td>
+                 
+                
+                </tr>
+                <tr>
+                    <td>08</td>
+                    <td>Essay MAL (SNR)</td>
+                    <td><b>A </b> (12, 8, 4)</td>
+                    <td>
+                        <br>Fist with a Grade: 313-Mafaz Rahman (Telesur)<br>
+                        second with b Grade: 101-vasih (Bloomberg)<br>
+                        therd with c greate: 201-swalih pachambla (Retura)<br></td>
+                 
+                
+                </tr>
+                <tr>
+                    <td>09</td>
+                    <td>oration ENG (SNR)</td>
+                    <td><b>B </b> (10, 6, 3)</td>
+                    <td>
+                        <br>Fist with a Grade: 313-Mafaz Rahman (Telesur)<br>
+                        second with b Grade: 101-vasih (Bloomberg)<br>
+                        therd with c greate: 201-swalih pachambla (Retura)<br></td>
+                 
+                
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Song (MAL)</td>
+                    <td><b>A </b> (12, 8, 4)</td>
+                    <td>
+                        <br>Fist with a Grade: 313-Mafaz Rahman (Telesur)<br>
+                        second with b Grade: 101-vasih (Bloomberg)<br>
+                        therd with c greate: 201-swalih pachambla (Retura)<br></td>
+                 
+                
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Azan (JNR)</td>
+                    <td><b>C </b> (6, 4, 2)</td>
+                    <td>
+                        <br>Fist with a Grade: 313-Mafaz Rahman (Telesur)<br>
+                        second with b Grade: 101-vasih (Bloomberg)<br>
+                        therd with c greate: 201-swalih pachambla (Retura)<br></td>
+                 
+                
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Burdha (GNR)</td>
+                    <td><b>D </b> (20, 15, 10)</td>
+                    <td>
+                        <br>Fist with a Grade: 313-Mafaz Rahman (Telesur)<br>
+                        second with b Grade: 101-vasih (Bloomberg)<br>
+                        therd with c greate: 201-swalih pachambla (Retura)<br></td>
+                 
+                
+                </tr>
+                
+
+            </tbody>
+        
+        </table>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+       <div class="side-bar">
+           <div class="close-btn">
+               <i class="fas fa-times"></i>
+           </div>
+           <div class="menu">
+               <div class="item"><a href="index.html"><i class="fas fa-desktop"></i>HOME</a></div>
+                 <div class="item"><a href="schedule.html"><i class="fa-solid fa-clock"></i>SCHEDULE</a></div>
+    
+                 <div class="item">
+                   <a class="sub-btn"><i class="fa fa-edit"></i>RESULT<i class="fas fa-angle-right dropdown"></i></a> 
+                   <div class="sub-menu">
+                       <a href="result-junior.html" class="sub-item">JUNIOR</a>
+                       <a href="result-senior.html" class="sub-item">SENIOR</a>
+                       <a href="result-general.html" class="sub-item">GENERAL</a>
+                       <a href="result-total.html" class="sub-item">TOTAL</a>
+
+                    </div>
+                </div>
+    
+               <div class="item">
+                   <a class="sub-btn"><i class="fa-solid fa-chart-simple"></i>GRAPH<i class="fas fa-angle-right dropdown "></i></a>
+                   <div class="sub-menu">
+                       <a href="graph-junior.html" class="sub-item">JUNIOR</a>
+                       <a href="graph-senior.html" class="sub-item">SENIOR</a>
+                       <a href="graph-general.html" class="sub-item">GENERAL</a>
+                   </div>
+               </div>
+    
+               <div class="item"><a href="graph-total.html"><i class="fa-solid fa-chart-pie"></i>TOTAL GRAPH</a></div>
+    
+                 <div class="item">
+                    <a class="sub-btn"><i class="fa fa-image"></i>IMAGES<i class="fas fa-angle-right dropdown "></i></a>
+                    <div class="sub-menu">
+                        <a href="images-fest.html" class="sub-item">FEST</a>
+                        <a href="images-on-stage.html" class="sub-item">ON-STAGE</a>
+                        <a href="images-off-stage.html" class="sub-item">OFF-STAGE</a>
+                    </div>
+                </div>
+                <div class="item"><a href="live.html"><i class="fas fa-video"></i>VIDEOS & LIVE</a></div>
+                <div class="item"><a href="form-sumtnow.html"><i class="fa-solid fa-comment"></i>FEED BACK</a></div>
+
+    
+            </div>
+    
+       </div>
+    
+       
+       
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+           <script type="text/javascript">
+               $(document).ready(function(){
+                   //jquery for toggle sub menus
+                   $('.sub-btn').click(function(){
+                       $(this).next('.sub-menu').slideToggle();
+                       $(this).find('.dropdown').toggleClass('rotate')
+                        
+                   })
+                   //jquery for expand and collapse the sidebar
+                   $('.menu-btn').click(function(){
+                       $('.side-bar').addClass('active');
+                       $('menu-btn').css("visibility","hidden");
+                   })
+                   $('.close-btn').click(function(){
+                       $('.side-bar').removeClass('active');
+                       $('menu-btn').css("visibility","visible");
+                   })
+               })
+           </script>
+
+
+
+          <script src="//code.jquery.com/jquery-3.5.1.js"></script>
+          <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+          <script src="https://cdn.datatables.net/rowreorder/1.3.1/js/dataTables.rowReorder.min.js"></script>
+          <script src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
+
+           <script src="Add-files/data-table.js"></script>
+        
+    </body>
+    </html>
